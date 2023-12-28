@@ -7,6 +7,7 @@ import ListItems from "./layout/ListItems";
 import { NavLink } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { FaSearch } from "react-icons/fa";
+import { FaUser, FaAngleDown, FaShoppingCart } from "react-icons/fa";
 const Header = () => {
   const [show, setShow] = useState(false);
 
@@ -71,9 +72,20 @@ const Header = () => {
               type="text"
             />
 
-            <FaSearch className="absolute top-8 right-3 md:top-9 md:right-5" size={20} />
+            <FaSearch
+              className="absolute top-8 right-3 md:top-9 md:right-5"
+              size={20}
+            />
           </div>
-          <div>Right</div>
+          <div className="">
+            <Flex className="justify-between w-16">
+              <Flex>
+                <FaUser className="cursor-pointer"/>
+                <FaAngleDown  className="cursor-pointer"/>
+              </Flex>
+              <FaShoppingCart className="cursor-pointer" />
+            </Flex>
+          </div>
         </Flex>
       </div>
     </>

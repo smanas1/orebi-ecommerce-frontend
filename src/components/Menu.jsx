@@ -27,7 +27,7 @@ const Menu = () => {
         <img src="/assets/Logo.png" alt="logo" />
       </div>
 
-      <div className="md:hidden" ref={ref}>
+      <div className="md:hidden z-20"  ref={ref}>
         <HiOutlineMenu size={20} />
         {/* This div show before md */}
         <div
