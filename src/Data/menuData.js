@@ -5,18 +5,45 @@ export const menuData = [
   },
   {
     title: "Shop",
-    link: "/",
+    link: "/shop",
   },
   {
     title: "About",
-    link: "/",
+    link: "/about",
   },
   {
     title: "Contacts",
-    link: "/",
+    link: "/contacts",
   },
   {
     title: "Journal",
+    link: "/journal",
+  },
+];
+
+export const dropdownData = [
+  {
+    title: "Accesories",
+    link: "/",
+  },
+  {
+    title: "Furniture",
+    link: "/",
+  },
+  {
+    title: "Electronics",
+    link: "/",
+  },
+  {
+    title: "Clothes",
+    link: "/",
+  },
+  {
+    title: "Bags",
+    link: "/",
+  },
+  {
+    title: "Home appliances",
     link: "/",
   },
 ];
