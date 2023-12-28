@@ -6,7 +6,7 @@ import { dropdownData } from "../Data/menuData";
 import ListItems from "./layout/ListItems";
 import { NavLink } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-
+import { FaSearch } from "react-icons/fa";
 const Header = () => {
   const [show, setShow] = useState(false);
 
@@ -30,7 +30,9 @@ const Header = () => {
             <Dropdown>
               <Flex className="cursor-pointer">
                 <BiMenuAltLeft size={25} />
-                <h3>Shop by Category</h3>
+                <div>
+                  <span className="hidden md:inline">Shop by </span>Category
+                </div>
               </Flex>
               {show && (
                 <List className="absolute">
@@ -55,7 +57,22 @@ const Header = () => {
               )}
             </Dropdown>
           </div>
-          <div>Mid</div>
+          <div className="w-[40%] py-5 relative">
+            {/* This is aftar md input */}
+            <input
+              placeholder="Search Products"
+              className="hidden md:block w-full font-DM py-4 px-3"
+              type="text"
+            />
+
+            <input
+              placeholder="Search"
+              className="md:hidden w-full font-DM py-3 px-2"
+              type="text"
+            />
+
+            <FaSearch className="absolute top-8 right-3 md:top-9 md:right-5" size={20} />
+          </div>
           <div>Right</div>
         </Flex>
       </div>

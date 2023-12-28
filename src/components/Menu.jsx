@@ -73,7 +73,7 @@ const Menu = () => {
 
       {/* This div show aftar md */}
       <div className="hidden md:block">
-        <List className="flex box-border text-md gap-10 font-bold text-gray-500 font-DM ">
+        <List className="flex box-border text-md gap-10  text-gray-500 font-DM ">
           {menuData.map((item, i) => (
             <ListItems key={i} className="hover:text-black cursor-pointer">
               <NavLink
