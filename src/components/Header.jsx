@@ -2,7 +2,7 @@ import Dropdown from "./layout/Dropdown";
 import Flex from "./layout/Flex";
 import { BiMenuAltLeft } from "react-icons/bi";
 import List from "./layout/List";
-import { dropdownData } from "../Data/menuData";
+import { dropdownData,  userMenu } from "../Data/menuData";
 import ListItems from "./layout/ListItems";
 import { NavLink } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
@@ -10,7 +10,9 @@ import { FaSearch } from "react-icons/fa";
 import { FaUser, FaAngleDown, FaShoppingCart } from "react-icons/fa";
 const Header = () => {
   const [show, setShow] = useState(false);
-
+  const [userShow, setUserShow] = useState(false);
+  const userRef = useRef(null);
+  const dropdownRef = useRef(null);
   useEffect(() => {
     const clickOutside = (e) => {
       if (dropdownRef.current.contains(e.target)) {
@@ -21,7 +23,16 @@ const Header = () => {
     };
     document.addEventListener("click", clickOutside);
   });
-  const dropdownRef = useRef(null);
+  useEffect(() => {
+    const clickOutside = (e) => {
+      if (userRef.current.contains(e.target)) {
+        setUserShow(true);
+      } else {
+        setUserShow(false);
+      }
+    };
+    document.addEventListener("click", clickOutside);
+  });
 
   return (
     <>
@@ -79,10 +90,31 @@ const Header = () => {
           </div>
           <div className="">
             <Flex className="justify-between w-16">
-              <Flex>
-                <FaUser className="cursor-pointer"/>
-                <FaAngleDown  className="cursor-pointer"/>
-              </Flex>
+              <div className="flex relative text-center" ref={userRef}>
+                <FaUser className="cursor-pointer" />
+                <FaAngleDown className="cursor-pointer" />
+                {userShow && (
+                  <List className="absolute top-5 -right-32">
+                    {userMenu.map((item, i) => (
+                      <ListItems
+                        key={i}
+                        className="bg-[#262626] p-4
+                    border border-[#2D2D2D] hover:bg-white transition-all group w-64"
+                      >
+                        <NavLink
+                          to={item.link}
+                          className={`${({ isActive }) =>
+                            isActive
+                              ? "text-black"
+                              : ""} font-DM group-hover:text-black text-[#D8D8D8]`}
+                        >
+                          {item.title}
+                        </NavLink>
+                      </ListItems>
+                    ))}
+                  </List>
+                )}
+              </div>
               <FaShoppingCart className="cursor-pointer" />
             </Flex>
           </div>

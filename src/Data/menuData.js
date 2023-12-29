@@ -47,3 +47,8 @@ export const dropdownData = [
     link: "/",
   },
 ];
+
+export const userMenu = [
+  { title: "My Account", link: "/" },
+  { title: "Log Out", link: "/" },
+];
