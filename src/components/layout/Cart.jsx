@@ -1,29 +1,35 @@
 import { cartData } from "../../Data/cartData";
 import { IoClose } from "react-icons/io5";
 import Flex from "./Flex";
-import { useEffect, useState } from "react";
+
 const Cart = () => {
+  let price = 0;
+
   return (
     <>
       <div className="absolute right-32">
-        {cartData.map((item, i) => (
-          <div
-            key={i}
-            className="flex p-5 gap-2 font-DM font-bold items-center bg-[#F5F5F3]"
-          >
-            <img width={80} src={item.link} alt="cart" />
+        {cartData.map((item, i) => {
+          price += item.price;
 
-            <div>
-              <h4 className="">{item.title}</h4>
+          return (
+            <div
+              key={i}
+              className="flex p-5 gap-2 font-DM font-bold items-center bg-[#F5F5F3]"
+            >
+              <img width={80} src={item.link} alt="cart" />
 
-              <p className="mt-1">${item.price}</p>
+              <div>
+                <h4 className="">{item.title}</h4>
+
+                <p className="mt-1">${item.price}</p>
+              </div>
+              <IoClose size={25} className="mx-3 cursor-pointer" />
             </div>
-            <IoClose size={25} className="mx-3 cursor-pointer" />
-          </div>
-        ))}
+          );
+        })}
         <div className="bg-white p-4 drop-shadow-md font-DM box-border">
           <p>
-            Subtotal: <span className="font-bold">$44.00</span>
+            Subtotal: <span className="font-bold">${price}</span>
           </p>
           <Flex className="justify-evenly">
             <div className="py-4">
