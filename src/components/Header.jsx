@@ -16,6 +16,7 @@ const Header = () => {
   const userRef = useRef(null);
   const cartRef = useRef(null);
   const dropdownRef = useRef(null);
+
   useEffect(() => {
     const clickOutside = (e) => {
       if (cartRef.current.contains(e.target)) {
@@ -26,6 +27,7 @@ const Header = () => {
     };
     document.addEventListener("click", clickOutside);
   });
+
   useEffect(() => {
     const clickOutside = (e) => {
       if (dropdownRef.current.contains(e.target)) {
@@ -60,7 +62,7 @@ const Header = () => {
                 </div>
               </Flex>
               {show && (
-                <List className="absolute">
+                <List className="absolute z-10">
                   {dropdownData.map((item, i) => (
                     <ListItems
                       key={i}
@@ -104,7 +106,7 @@ const Header = () => {
                 <FaUser className="cursor-pointer" />
                 <FaAngleDown className="cursor-pointer" />
                 {userShow && (
-                  <List className="absolute top-5 -right-32">
+                  <List className="absolute top-5 right-0 z-10">
                     {userMenu.map((item, i) => (
                       <ListItems
                         key={i}
@@ -126,7 +128,7 @@ const Header = () => {
                 )}
               </div>
               {/* Cart Part */}
-              <div ref={cartRef} className="">
+              <div ref={cartRef} className="relative ">
                 <FaShoppingCart className="cursor-pointer" />
 
                 {cartShow && <Cart />}

@@ -7,9 +7,12 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import App from "./App";
+import Home from "./Pages/Home";
 
 const router = createBrowserRouter(
-  createRoutesFromElements(<Route path="/" element={<App />}></Route>)
+  createRoutesFromElements(<Route path="/" element={<App />}>
+    <Route index element={<Home/>}/>
+  </Route>)
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(

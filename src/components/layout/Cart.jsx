@@ -7,7 +7,7 @@ const Cart = () => {
 
   return (
     <>
-      <div className="absolute right-32">
+      <div className="absolute right-0 w-[340px] z-10">
         {cartData.map((item, i) => {
           price += item.price;
 
