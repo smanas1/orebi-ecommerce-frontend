@@ -10,7 +10,7 @@ const Banner = () => {
     dots: true,
     arrows: false,
     infinite: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 10000,
     autoplay: true,
     speed: 500,
     slidesToShow: 1,

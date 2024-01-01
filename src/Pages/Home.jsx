@@ -1,9 +1,13 @@
-import Banner from "../components/Banner"
+import AdditionalInfo from "../components/AdditionalInfo";
+import Banner from "../components/Banner";
 
 const Home = () => {
   return (
-    <Banner/>
-  )
-}
+    <>
+      <Banner />
+      <AdditionalInfo />
+    </>
+  );
+};
 
-export default Home
+export default Home;
