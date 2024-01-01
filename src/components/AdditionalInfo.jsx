@@ -8,7 +8,7 @@ const AdditionalInfo = () => {
       <div className=" my-3 py-3 border-t border-b md:my-7 md:py-6">  <Flex className="container justify-between font-DM">
           <Link>
             <Flex className="items-center">
-            <PiNumberTwoBold className="text-lg sm:text-2xl" />
+            <PiNumberTwoBold className="text-lg sm:text-4xl" />
               <p className="text-[10px] text-[#6D6D6D] sm:text-base">
                 Two years warranty
               </p>
