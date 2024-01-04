@@ -1,38 +1,25 @@
 import Product from "./layout/Product";
-import { newArrivalData } from "./../Data/productData";
+import { newArrivalSlide } from "./../Data/productData";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/swiper-bundle.css";
-import "./style.css";
+import "../Style/style.css";
 
 const NewArrival = () => {
   return (
     <>
       <div className="container">
-        <h2 className="mt-32 font-DM font-bold mb-12 text-4xl">New Arrivals</h2>
-        {/* <div className="flex justify-between gap-10">
-          {newArrivalData.map((item, i) => (
-            <div className="w-80 " key={i}>
-              <Product
-                img={item.img}
-                title={item.title}
-                price={item.price}
-                status={item.status}
-                color={item.color}
-              />
-            </div>
-          ))}
-        </div> */}
+        <h2 className="md:mt-32 mt-10 font-DM font-bold mb-12 text-4xl">New Arrivals</h2>
 
         <Swiper
           slidesPerView={1}
-          spaceBetween={10}
+          spaceBetween={35}
           navigation={true}
           autoplay={{
-            delay: 2500,
+            delay: 10000,
             disableOnInteraction: false,
           }}
           breakpoints={{
@@ -54,15 +41,15 @@ const NewArrival = () => {
             },
           }}
           style={{
-            '--swiper-navigation-color': '#000',
-            '--swiper-pagination-color': '#000',
+            "--swiper-navigation-color": "#000",
+            "--swiper-pagination-color": "#000",
           }}
           modules={[Navigation, Autoplay]}
           className="mySwiper"
         >
-          {newArrivalData.map((item, i) => (
+          {newArrivalSlide.map((item, i) => (
             <SwiperSlide key={i}>
-              <div className="w-80 " key={i}>
+              <div className="w-full " key={i}>
                 <Product
                   img={item.img}
                   title={item.title}

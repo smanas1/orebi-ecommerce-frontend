@@ -7,7 +7,7 @@ const Product = ({ img, title, price, status, color }) => {
     <>
       <div className="w-full relative font-DM group">
         <div className="relative overflow-hidden">
-          <img src={img} alt="product image" />
+          <img className="w-full object-cover" src={img} alt="product image" />
           {/* Hover */}
           <div className="flex justify-end -bottom-1/2  py-5  pe-6 absolute transition-all group-hover:bottom-0 left-0 bg-white  w-full">
             <div>
