@@ -15,6 +15,11 @@ export const cartData = [
     link: "/assets/watch.png",
     price: 44.25,
   },
+  {
+    title: "osman",
+    link: "/assets/watch.png",
+    price: 100,
+  },
 
   
  

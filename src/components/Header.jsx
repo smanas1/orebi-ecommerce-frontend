@@ -13,9 +13,9 @@ const Header = () => {
   const [show, setShow] = useState(false);
   const [userShow, setUserShow] = useState(false);
   const [cartShow, setcartShow] = useState(false);
-  const userRef = useRef(null);
-  const cartRef = useRef(null);
-  const dropdownRef = useRef(null);
+  const userRef = useRef();
+  const cartRef = useRef();
+  const dropdownRef = useRef();
 
   useEffect(() => {
     const clickOutside = (e) => {
