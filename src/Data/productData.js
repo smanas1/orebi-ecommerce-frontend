@@ -84,3 +84,8 @@ export const newArrivalSlide = [
     color: "Black",
   },
 ];
+
+export const testData = [
+  {title:'Test 1', price:1},
+  {title:'Test 2', price:1}
+]
