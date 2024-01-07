@@ -18,7 +18,7 @@ const Shop = () => {
       <div className="container flex max-sm:items-center max-sm:justify-center max-sm:text-center">
         <div className="w-1/4 hidden   sm:block bg-green-400">sfsefs</div>
         <div className="md:w-3/4 bg">
-          <div className="flex justify-center sm:justify-end gap-10 pb-4 px-4">
+          <div className="flex justify-center  gap-10 pb-4 px-4">
             {
               <PageSelect
                 title="Sort by:"

@@ -14,16 +14,20 @@ const Cart = () => {
           return (
             <div
               key={i}
-              className="flex p-5 gap-2 font-DM font-bold items-center bg-[#F5F5F3]"
+              className="flex p-5 border-t gap-2 font-DM font-bold items-center bg-[#F5F5F3]"
             >
               <img width={80} src={item.link} alt="cart" />
 
-              <div>
-                <h4 className="">{item.title}</h4>
+              <div className="flex justify-between w-full">
+                <div>
+                  <h4 className="">{item.title}</h4>
 
-                <p className="mt-1">${item.price}</p>
+                  <p className="mt-1">${item.price}</p>
+                </div>
+                <div>
+                  <IoClose size={25} className="mx-3 cursor-pointer" />
+                </div>
               </div>
-              <IoClose size={25} className="mx-3 cursor-pointer" />
             </div>
           );
         })}
