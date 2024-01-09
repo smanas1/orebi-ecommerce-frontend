@@ -64,8 +64,8 @@ const Shop = () => {
               <IoFilter className="md:hidden" size={24} />
               {/* This section for low device */}
               {leftShow && (
-                <div className="lg:hidden absolute top-0 left-0 w-1/2 flex justify-center bg-white z-10">
-                  <div className="">
+                <div className="lg:hidden absolute top-0 left-0 w-3/4 flex justify-center bg-white z-10">
+                  <div className="w-3/4">
                     <LeftDropdown
                       title="Shop by Category"
                       subDropdown={false}
