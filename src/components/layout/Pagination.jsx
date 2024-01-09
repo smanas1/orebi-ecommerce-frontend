@@ -33,7 +33,6 @@ function Pagination({ itemsPerPage }) {
   const [itemOffset, setItemOffset] = useState(0);
   const [end, setEnd] = useState(0);
 
-
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
     console.log(`Loading items from ${itemOffset} to ${endOffset}`);
@@ -52,7 +51,6 @@ function Pagination({ itemsPerPage }) {
 
   return (
     <>
-      
       <div className="relative font-DM ">
         <Items currentItems={currentItems} />
         <ReactPaginate
