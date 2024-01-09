@@ -29,6 +29,11 @@ export const dropdownData = [
   {
     title: "Furniture",
     link: "/",
+    subMenu:[
+      {title:'Khat'},
+      {title:'table'},
+      {title:'Chair'}
+    ]
   },
   {
     title: "Electronics",
@@ -37,6 +42,11 @@ export const dropdownData = [
   {
     title: "Clothes",
     link: "/",
+    subMenu:[
+      {title:'panjabi'},
+      {title:'tupi'},
+      {title:'jainamaj'}
+    ]
   },
   {
     title: "Bags",
