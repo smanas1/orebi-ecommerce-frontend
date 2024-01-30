@@ -17,6 +17,7 @@
     "react-router-dom": "^6.21.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
+    "sm-rnumber": "^1.0.3",
     "swiper": "^11.0.5"
   },
   "devDependencies": {

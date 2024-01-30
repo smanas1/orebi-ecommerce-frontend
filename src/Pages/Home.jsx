@@ -16,6 +16,7 @@ const Home = () => {
       <BestSeller/>
       <MiddleAdd/>
       <SpacialOffers/>
+      
     </>
   );
 };

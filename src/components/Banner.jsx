@@ -95,6 +95,7 @@ const Banner = () => {
       </div>
     ),
   };
+
   return (
     <div className="">
       <Slider {...settings}>

@@ -12,7 +12,7 @@ const Product = ({ img, title, price, status, color }) => {
           <div className="flex justify-end -bottom-1/2  py-5  pe-6 absolute transition-all group-hover:bottom-0 left-0 bg-white  w-full">
             <div>
               <Flex className="items-center gap-2 cursor-pointer text-right justify-end">
-                <p className="text-[#6D6D6D] text-right">Add to Wish List</p>{" "}
+                <p className="text-[#6D6D6D] text-right">Add to Wish List</p>
                 <FaHeart />
               </Flex>
 
@@ -28,7 +28,7 @@ const Product = ({ img, title, price, status, color }) => {
           </div>
         </div>
         <Flex className="justify-between items-center  pb-2 pt-6">
-          <h3 className="font-bold text-xl text-primary">{title}</h3>{" "}
+          <h3 className="font-bold text-xl text-primary">{title}</h3>
           <p className=" text-[#767676]"> ${price}</p>
         </Flex>
         <p className=" text-[#767676]">{color}</p>
