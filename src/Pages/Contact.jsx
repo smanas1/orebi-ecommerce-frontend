@@ -17,7 +17,7 @@ const Contact = () => {
 
       <div className="md:w-1/2 w-full">
         <Input title="Name" type="text" />
-        <Input title="Email" type="Email" />
+        <Input title="Email" type="email" />
         {/* Message area */}
         <div className="mt-9">
           <label className="text-xl font-bold block" htmlFor="Message">
