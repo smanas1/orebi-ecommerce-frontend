@@ -5,7 +5,7 @@ const Input = ({ title, type }) => {
         {title}
       </label>
       <input
-        className="w-full py-2 outline-none border-b text-gray-600"
+        className="w-full py-2 outline-none border-b text-gray-600 "
         type={type}
         placeholder={`Your ${title} Here`}
         name={title}
