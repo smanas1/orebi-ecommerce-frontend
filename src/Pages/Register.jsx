@@ -1,6 +1,7 @@
 import Breadcrumb from "../components/layout/Breadcrumb";
 import Input from "../components/layout/Input";
 import InputHeader from "../components/layout/InputHeader";
+import InputButton from "./../components/layout/InputButton";
 
 const Register = () => {
   return (
@@ -15,7 +16,7 @@ const Register = () => {
         the.
       </p>
       <hr />
-      <div className="w-1/2">
+      <div className="lg:w-1/2">
         <InputHeader title="Sign up" />
         <div className="grid grid-cols-2 gap-4">
           <Input title="First Name" type="text" />
@@ -25,7 +26,7 @@ const Register = () => {
         </div>
       </div>
       <hr className="my-14" />
-      <div className="w-1/2">
+      <div className="lg:w-1/2">
         <InputHeader title="Your Personal Details" />
         <div className="grid grid-cols-2 gap-4">
           <Input title="Address 1" type="text" />
@@ -37,7 +38,7 @@ const Register = () => {
         </div>
       </div>
       <hr className="my-14" />
-      <div className="w-1/2">
+      <div className="lg:w-1/2">
         <InputHeader title="Your Password" />
         <div className="grid grid-cols-2 gap-4">
           <Input title="Password" type="password" />
@@ -51,17 +52,14 @@ const Register = () => {
           id="link-checkbox"
           type="checkbox"
           value=""
-          className="w-4 h-4 text-blue-600 bg-gray-100  rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 "
+          className="w-4 h-4  bg-gray-100  rounded   dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 "
         />
         <label
           htmlFor="link-checkbox"
           className="ms-2 text-sm font-medium text-gray-400 "
         >
           I agree with the
-          <a
-            href="#"
-            className="text-blue-600 dark:text-blue-500 hover:underline"
-          >
+          <a href="#" className="text-blue-600  hover:underline">
             terms and conditions
           </a>
           .
@@ -75,7 +73,7 @@ const Register = () => {
             type="checkbox"
             value=""
             name="bordered-checkbox"
-            className="w-4 h-4 text-blue-600 bg-gray-100  rounded focus:ring-blue-500 dark:focus:ring-blue-600  focus:ring-2 dark:bg-gray-700 "
+            className="w-4 h-4 text-blue-600 bg-gray-100  rounded    focus:ring-2 dark:bg-gray-700 "
           />
           <label
             htmlFor="bordered-checkbox-2"
@@ -100,6 +98,7 @@ const Register = () => {
           </label>
         </div>
       </div>
+      <InputButton title="Sign Up" />
     </div>
   );
 };
