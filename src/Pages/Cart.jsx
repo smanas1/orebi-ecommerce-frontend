@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { cartData } from "../Data/cartData";
 import CartData from "../components/CartData";
 import Breadcrumb from "../components/layout/Breadcrumb";
